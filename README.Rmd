@@ -1,0 +1,52 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# hciplusbrief
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+hciplusbrief provides lightweight, publication-ready visuals for HCI+ briefs and reporting.
+A key feature is the HCI+ progress bubble chart, which compares potential (maximum) HCI+ to achieved HCI+.
+
+## Installation
+
+You can install the development version of hciplusbrief from [GitHub](https://github.com/) with:
+
+```{r}
+# install.packages("pak")
+pak::pak("fbw1/hciplusbrief")
+```
+
+## Example
+
+### HCI+ progress bubble chart
+The progress bubble chart displays:
+- an outer bubble for Potential Productivity (max HCI+)
+- an inner bubble for Actual HCI+ (progress toward the max)
+
+The inner bubble is scaled so that its area is proportional to `progress / max_value`.
+
+```{r example}
+library(hciplusbrief)
+
+progress_bubble_hci(
+  value = 280,
+  progress = 280,
+  max_value = 325,
+  title = "HCI+"
+)
+```
+
