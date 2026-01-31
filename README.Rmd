@@ -25,7 +25,7 @@ A key feature is the HCI+ progress bubble chart, which compares potential (maxim
 
 You can install the development version of hciplusbrief from [GitHub](https://github.com/) with:
 
-```{r}
+```{r, eval = F}
 # install.packages("pak")
 pak::pak("fbw1/hciplusbrief")
 ```
@@ -34,8 +34,8 @@ pak::pak("fbw1/hciplusbrief")
 
 ### HCI+ progress bubble chart
 The progress bubble chart displays:
-- an outer bubble for Potential Productivity (max HCI+)
-- an inner bubble for Actual HCI+ (progress toward the max)
+- an outer bubble for Potential Productivity (max HCI+);
+- an inner bubble for Actual HCI+ (progress toward the max).
 
 The inner bubble is scaled so that its area is proportional to `progress / max_value`.
 
