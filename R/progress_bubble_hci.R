@@ -5,17 +5,15 @@
 #' maximum. The inner circle radius is scaled by \code{sqrt(progress / max_value)}
 #' so its *area* is proportional to progress.
 #'
-#' @param value Numeric. The HCI+ value displayed as a label inside the inner
-#'   circle. This is purely the text shown on the plot and does not affect sizing.
 #' @param progress Numeric. The amount of achieved HCI+ used to scale the inner
-#'   bubble relative to \code{max_value}. Values are clamped to \eqn{[0, max_value]}.
+#'   bubble relative to \code{max_value}. Values are clamped to \eqn{[0, max_value]}. 
 #' @param max_value Numeric. The maximum possible HCI+ used to normalize
 #'   \code{progress}. Defaults to 325.
 #' @param title Character. Used as the legend title when \code{legend_title} is
 #'   \code{NULL}. Defaults to \code{""}.
-#' @param txt.col Character. Text colour for the \code{value} label.
+#' @param txt.col Character. Text colour for the \code{progress} label.
 #' @param radius Numeric. Radius of the outer (potential) bubble, in plot units.
-#' @param value_size Numeric. Font size for the \code{value} label.
+#' @param value_size Numeric. Font size for the \code{progress} label.
 #'
 #' @param legend_title Character or \code{NULL}. Legend title. If \code{NULL},
 #'   \code{title} is used.
@@ -38,14 +36,14 @@
 #'
 #' @examples
 #' # Basic usage
-#' progress_bubble_hci(value = 280, progress = 280)
+#' progress_bubble_hci(progress = 280)
 #'
 #' # Show lower progress (inner bubble shrinks)
-#' progress_bubble_hci(value = 120, progress = 120, max_value = 325)
+#' progress_bubble_hci(progress = 120, max_value = 325)
 #'
 #' # Custom legend title and styling
 #' progress_bubble_hci(
-#'   value = 280, progress = 280,
+#'   progress = 280,
 #'   legend_title = "HCI+",
 #'   legend_title_size = 10,
 #'   legend_text_size = 9
@@ -53,7 +51,6 @@
 #'
 #' @export
 progress_bubble_hci <- function(
-  value = 280,
   progress = 280,
   max_value = 325,
   title = "",
@@ -157,7 +154,7 @@ progress_bubble_hci <- function(
       "text",
       x = 0,
       y = y_small,
-      label = value,
+      label = progress,
       size = value_size,
       fontface = "bold",
       color = txt.col,

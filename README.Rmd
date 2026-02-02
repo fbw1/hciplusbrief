@@ -39,11 +39,11 @@ The progress bubble chart displays:
 
 The inner bubble is scaled so that its area is proportional to `progress / max_value`.
 
+
 ```{r example}
 library(hciplusbrief)
 
 progress_bubble_hci(
-  value = 280,
   progress = 280,
   max_value = 325,
   title = "HCI+"

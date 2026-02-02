@@ -26,8 +26,8 @@ pak::pak("fbw1/hciplusbrief")
 ### HCI+ progress bubble chart
 
 The progress bubble chart displays: - an outer bubble for Potential
-Productivity (max HCI+) - an inner bubble for Actual HCI+ (progress
-toward the max)
+Productivity (max HCI+); - an inner bubble for Actual HCI+ (progress
+toward the max).
 
 The inner bubble is scaled so that its area is proportional to
 `progress / max_value`.
@@ -36,7 +36,6 @@ The inner bubble is scaled so that its area is proportional to
 library(hciplusbrief)
 
 progress_bubble_hci(
-  value = 280,
   progress = 280,
   max_value = 325,
   title = "HCI+"
